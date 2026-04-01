@@ -175,7 +175,6 @@ Learning outcomes:
 
 Lessons:
 
-- [Lesson: Correlation](./M4/lessons/03_slides_num_correlation.qmd)
 - [Lab 1: Categorical Association](./M4/lessons/02_cat_association.ipynb)
 - [Lab 2: Numerical Correlation](./M4/lessons/03_num_correlation.ipynb)
 
