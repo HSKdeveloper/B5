@@ -1,0 +1,140 @@
+---
+title: "Introduction to Data Science"
+bibliography: ../../../references.bib
+format:
+  revealjs:
+    incremental: false
+    slide-level: 2
+---
+
+## Motivating story
+
+[NotebookLM comic (John Snow)](https://notebooklm.google.com/notebook/8e9ff4ca-2054-48d5-b0d3-120db7d965f8?artifactId=ce04c28d-cadf-4431-9e82-7d15c8dc4d66)
+
+**The invisible threat:** London, 1854 — cholera in Soho. Consensus: *miasma* (bad air). **John Snow** asked for evidence: cholera might spread through **contaminated water**, not smell.
+
+
+## Gathering the data
+
+Snow could not see bacteria; he **collected data** instead:
+
+1. **Where** each household lived.
+2. **Which** drinking water they used.
+
+He put deaths on a **map** — one mark per address — turning tables into **spatial** evidence.
+
+
+## Identifying the pattern
+
+Deaths clustered around the **Broad Street pump**, not evenly across “bad air.”
+
+![](../../assets/snows-mapped-death-frequency.png){.r-stretch}
+
+
+## Investigating anomalies
+
+Strong hypotheses survive **exceptions**:
+
+- **The brewery:** Workers drank beer / a **private well** — not the pump.
+- **The workhouse:** **Own well** — almost no deaths amid surrounding cases.
+- **The Hampstead widow:** Died far from Soho; she still drank **Broad Street water** (and her niece, who visited).
+
+**Conclusion:** the variable was **water from that pump**, not proximity to foul air.
+
+
+## Data to action
+
+Snow showed the board his map and reasoning; they acted on the evidence.
+
+> "I had an interview with the Board of Guardians of St. James's parish... In consequence of what I said, the handle of the pump was removed on the following day." — John Snow
+
+The well was later found **near a leaking cesspit**.
+
+[@snow1855]
+
+
+## Why this matters for data science
+
+John Snow’s workflow is still the template:
+
+1. **Question assumptions** — demand evidence, not consensus alone.
+2. **Collect** structured, verifiable information.
+3. **Visualize** to see patterns lists hide.
+4. **Explain outliers** — they often **test** the story.
+5. **Act** — turn insight into a **specific** intervention.
+
+**Data science** is using evidence to understand a situation and decide what to do — with modern tools for what Snow did on foot and on paper.
+
+## What is data science?
+
+**Data** (plural): digitally recorded pieces of information about events. Together they support a full picture — stored and processed on computers.
+
+- Numbers, text, images, sound, …
+- Types: numerical, categorical (and subtypes).
+- Different **algorithms** for different goals.
+
+> **Data science** is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract **knowledge and insights** from structured and unstructured data. It combines **statistics**, **computer science**, and **domain knowledge** to analyze data and support decisions and prediction.
+
+
+## Three pillars
+
+- **Domain knowledge** — the right questions and interpreting results.
+- **Math & statistics** — sound conclusions from **incomplete** information.
+- **Computer science** — storage, algorithms, scale.
+
+![](../../assets/Data-Science-Venn-Diagram.png){.r-stretch}
+
+
+## How did John Snow do it?
+
+- **Domain:** physician who understood disease, the city, what variables to look at that may affect the outcome
+- **Math & statistics:** structured data, mapping, reasoning from **pattern + exceptions**.
+- **Computer science:** none — paper records and **minimal** computation.
+
+Computers add **speed and reach**, not judgment. What we do with data still needs purpose and analysis.
+
+In other words, computation and data are just means to an end. That end is: **us gaining knowledge**.
+
+## Data science life cycle
+
+![](../../assets/DSLC.png){.r-stretch}
+
+Standard path from raw data to useful insight or product, and how roles map to the pipeline.
+
+## The process
+
+1. **Collection** — databases, logs, files, sensors, …
+2. **Cleaning** — missing values, duplicates, formats, errors.
+3. **EDA** — summaries and plots; trends, correlations, anomalies.
+4. **Model building** — learn patterns / predict on new data.
+5. **Deployment** — ship models into apps, APIs, or pipelines that run on **new** data.
+
+## The roles
+
+In large orgs these lines are sharp; in startups one person may wear several hats:
+
+- **Data engineers** — infrastructure: ingestion, storage, pipelines (collection & cleaning).
+- **Data analysts** — clean data, EDA, reports and dashboards (cleaning & EDA).
+- **ML engineers** — reliable, efficient models in production (build & deploy).
+- **Data scientists** — can span the whole cycle; often deepest in EDA and modeling, with enough engineering to get data and ship value.
+
+See: [SDAIA Professinoal Training in the Fields of Data and AI](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ProfessionalTrainingInTheFieldsOfDataAi.pdf).
+
+## Our World in Data
+
+Want to look at the world through data? See many examples at: [Our World in Data](https://ourworldindata.org/) — research and data on global challenges.
+
+## Data Analysis
+
+> **Data analysis** is the process of inspecting, cleansing, transforming, and modeling data with the goal of discovering useful information, informing conclusions, and supporting decision-making.
+
+Two approaches:
+
+1. **Confirmatory Data Analysis (CDA)**  
+   A top-down approach in which we start with a question and use data to answer it.  
+   Example: Hypothesis: "people are addicted to smart phones". Let's see if the data supports this.  
+   [Lab 1: Blind Typing Experiment](./02_lab_cda_blind_typing.ipynb)
+2. **Exploratory Data Analysis (EDA)**  
+   A bottom-up approach in which we start with the data and try to find something interesting.  
+   Example Data: "people who exercise at the gym". Let's find out what are their: ages, occupations, and common interests are.
+   [Lab 2: Exploring US Census 2010-2019 Data](./03_lab_eda_census.ipynb)
